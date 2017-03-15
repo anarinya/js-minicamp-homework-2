@@ -15,7 +15,7 @@ function greeting(language) {
   switch(language) {
     case 'German': return 'Guten Tag!';
     case 'Spanish': return 'Hola!';
-    case 'English': // pass-through
+    case 'English': // passthrough
     default: return 'Hello!';
   }
 }
