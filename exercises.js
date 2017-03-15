@@ -13,13 +13,10 @@ function greeting(language) {
   //language: 'Spanish' -> 'Hola!'
   //if language is undefined return 'Hello!'
   switch(language) {
-    case 'German':
-      return 'Guten Tag!';
-    case 'Spanish':
-      return 'Hola!';
-    case 'English':
-    default:
-      return 'Hello!';
+    case 'German': return 'Guten Tag!';
+    case 'Spanish': return 'Hola!';
+    case 'English': // pass-through
+    default: return 'Hello!';
   }
 }
 
