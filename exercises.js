@@ -15,7 +15,7 @@ function greeting(language) {
   switch(language) {
     case 'German': return 'Guten Tag!';
     case 'Spanish': return 'Hola!';
-    case 'English': // passthrough
+    case 'English': // pass-through
     default: return 'Hello!';
   }
 }
@@ -38,7 +38,7 @@ function isInteger(num) {
   //-10 -> true
   //otherwise return false
   //hint: you can solve this using Math.floor
-  return Math.floor(num) === num;
+  return num % 1 === 0;
 }
 
 function fizzBuzz(num) {
@@ -85,10 +85,10 @@ function incrementByOne(arr) {
   //arr is an array of integers  
   //increase each integer by one
   //return the array
-  for (var i = 0; i < arr.length; i++) {
-    arr[i]++;
-  }
-  return arr;
+  var inc = arr.map(function(n) {
+    return n+1;
+  });
+  return inc;
 }
 
 function addItemToArray(arr, item) {
@@ -123,20 +123,16 @@ function contains(arr, item) {
 function addNumbers(numbers) {
   //numbers is an array of integers.
   //add all of the integers and return the value
-  var sum = 0;
-  for (var i = 0; i < numbers.length; i++) {
-    sum += numbers[i];
-  }
+  var sum = numbers.reduce(function(prev, curr) {
+    return prev + curr;
+  }, 0);
   return sum;
 }
 
 function averageTestScore(testScores) {
   //testScores is an array.  Iterate over testScores and compute the average.
   //return the average
-  var sum = 0.0;
-  for (var i = 0; i < testScores.length; i++) {
-    sum += testScores[i];
-  }
+  var sum = addNumbers(testScores);
   return sum / testScores.length;
 }
 
