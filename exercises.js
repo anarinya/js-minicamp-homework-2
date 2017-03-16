@@ -139,7 +139,7 @@ function largestNumber(numbers) {
   //numbers is an array of integers
   //return the largest integer
   var max = numbers[0];
-  for (var i = 1; i < numbers.length; i++) {
+  for (var i = 1, len = numbers.length; i < len; i++) {
     if (numbers[i] > max) max = numbers[i];
   }
   return max;
